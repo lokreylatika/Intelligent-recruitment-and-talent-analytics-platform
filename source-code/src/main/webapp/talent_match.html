@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Talent Matching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Talent Matching</h1>
+
+    <p>
+        Select a candidate and job to automatically calculate
+        the skill compatibility score.
+    </p>
+
+    <form action="TalentMatchServlet" method="post">
+
+        <label>Candidate ID:</label>
+
+        <input type="number"
+               name="candidate_id"
+               required>
+
+        <label>Job ID:</label>
+
+        <input type="number"
+               name="job_id"
+               required>
+
+        <input type="submit"
+               value="Find Match">
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

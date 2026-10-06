@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Jobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Available Jobs</h1>
+
+    <p>View all job opportunities currently available.</p>
+
+    <div id="jobs">
+        Loading jobs...
+    </div>
+
+</div>
+
+<script>
+
+fetch("api/jobs")
+    .then(response => response.json())
+    .then(jobs => {
+
+        const jobsContainer = document.getElementById("jobs");
+
+        jobsContainer.innerHTML = "";
+
+        if (jobs.length === 0) {
+            jobsContainer.innerHTML = "<p>No jobs available.</p>";
+            return;
+        }
+
+        jobs.forEach(job => {
+
+            const jobDiv = document.createElement("div");
+
+            jobDiv.className = "job-card";
+
+            jobDiv.innerHTML = `
+                <h2>${job.title}</h2>
+
+                <p>
+                    <strong>Description:</strong>
+                    ${job.description}
+                </p>
+
+                <p>
+                    <strong>Required Skills:</strong>
+                    ${job.required_skills}
+                </p>
+
+                <p>
+                    <strong>Experience:</strong>
+                    ${job.experience} years
+                </p>
+
+                <p>
+                    <strong>Job ID:</strong>
+                    ${job.job_id}
+                </p>
+
+                <hr>
+            `;
+
+            jobsContainer.appendChild(jobDiv);
+        });
+
+    })
+    .catch(error => {
+
+        console.error(error);
+
+        document.getElementById("jobs").innerHTML =
+            "<p>Unable to load jobs.</p>";
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schedule Interview</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Recruitment Platform
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ViewJobServlet">Jobs</a>
+            <a href="candidate_register.html">Candidate</a>
+            <a href="schedule_interview.html">Interview</a>
+            <a href="AnalyticsServlet">Analytics</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Page Heading -->
+    <h1>Schedule Interview</h1>
+
+
+    <!-- Form Container -->
+    <div class="container">
+
+        <form action="InterviewServlet" method="post">
+
+            <!-- Application ID -->
+            <label for="application_id">
+                Application ID:
+            </label>
+
+            <input
+                type="number"
+                id="application_id"
+                name="application_id"
+                placeholder="Enter Application ID"
+                required
+            >
+
+
+            <!-- Interview Date -->
+            <label for="date">
+                Interview Date:
+            </label>
+
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+
+
+            <!-- Interview Time -->
+            <label for="time">
+                Interview Time:
+            </label>
+
+            <input
+                type="time"
+                id="time"
+                name="time"
+                required
+            >
+
+
+            <!-- Interview Mode -->
+            <label for="mode">
+                Interview Mode:
+            </label>
+
+            <select
+                id="mode"
+                name="mode"
+                required
+            >
+                <option value="">Select Mode</option>
+                <option value="Online">Online</option>
+                <option value="Offline">Offline</option>
+            </select>
+
+
+            <!-- Interviewer -->
+            <label for="interviewer">
+                Interviewer:
+            </label>
+
+            <input
+                type="text"
+                id="interviewer"
+                name="interviewer"
+                placeholder="Enter Interviewer Name"
+                required
+            >
+
+
+            <!-- Submit -->
+            <button type="submit">
+                Schedule Interview
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,908 @@
+/* =========================================================
+   GENERAL / RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVIGATION BAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    background: #1f2937;
+    padding: 18px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   GENERAL HEADINGS
+========================================================= */
+
+h1 {
+    text-align: center;
+    margin: 45px 0 30px;
+    color: #1f2937;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 650px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #374151;
+}
+
+form input,
+form select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   FORM SUBMIT BUTTON
+========================================================= */
+
+form button,
+form input[type="submit"] {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.hero-button.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.hero-button.primary:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.hero-button.secondary {
+    background: #374151;
+    color: white;
+}
+
+.hero-button.secondary:hover {
+    background: #111827;
+}
+
+
+/* =========================================================
+   DEFAULT HERO BUTTON
+========================================================= */
+
+.hero-button:not(.primary):not(.secondary) {
+    background: #2563eb;
+    color: white;
+}
+
+.hero-button:not(.primary):not(.secondary):hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   FEATURES - HOME PAGE
+========================================================= */
+
+.features {
+    width: 85%;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+
+    width: 250px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.feature-card h2 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+.feature-card a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.feature-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   JOBS PAGE
+========================================================= */
+
+.jobs-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.job-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border-left: 5px solid #2563eb;
+}
+
+.job-card h2 {
+    margin-bottom: 20px;
+
+    color: #1f2937;
+
+    font-size: 24px;
+}
+
+.job-card p {
+    margin: 12px 0;
+
+    color: #374151;
+
+    line-height: 1.6;
+}
+
+.job-card strong {
+    color: #111827;
+}
+
+.job-card .hero-button {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   ANALYTICS PAGE
+========================================================= */
+
+.analytics-intro {
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.analytics-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.analytics-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.analytics-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.analytics-card .icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.analytics-card h2 {
+    font-size: 19px;
+
+    margin-bottom: 15px;
+}
+
+.analytics-card p {
+    font-size: 38px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.analytics-card span {
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   ANALYTICS CARD TYPES
+========================================================= */
+
+.analytics-card.total {
+    border-top: 5px solid #2563eb;
+}
+
+.analytics-card.scheduled {
+    border-top: 5px solid #f59e0b;
+}
+
+.analytics-card.completed {
+    border-top: 5px solid #16a34a;
+}
+
+.analytics-card.cancelled {
+    border-top: 5px solid #dc2626;
+}
+
+
+/* =========================================================
+   SUCCESS CONTAINER
+========================================================= */
+
+.success-container {
+    width: 90%;
+    max-width: 750px;
+
+    margin: 60px auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.success-container h1 {
+    color: #16a34a;
+
+    font-size: 34px;
+
+    margin: 0 0 35px;
+}
+
+
+/* =========================================================
+   SUCCESS DETAILS
+========================================================= */
+
+.success-details {
+    width: 100%;
+
+    background: #f9fafb;
+
+    padding: 25px 30px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #16a34a;
+
+    text-align: left;
+
+    margin-bottom: 30px;
+}
+
+.success-details p {
+    font-size: 17px;
+
+    color: #374151;
+
+    margin: 16px 0;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.success-details p:first-child {
+    margin-top: 0;
+}
+
+.success-details p:last-child {
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+.success-details strong {
+    color: #111827;
+}
+
+
+/* =========================================================
+   SUCCESS BUTTON AREA
+========================================================= */
+
+.success-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   ERROR CONTAINER
+========================================================= */
+
+.error-container {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 60px auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.error-container h1 {
+    color: #dc2626;
+
+    font-size: 32px;
+
+    margin: 0 0 20px;
+}
+
+.error-container p {
+    font-size: 17px;
+
+    color: #374151;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .analytics-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .container {
+        width: 92%;
+
+        padding: 30px 20px;
+    }
+
+    .success-container {
+        width: 92%;
+
+        padding: 30px 20px;
+
+        margin-top: 40px;
+    }
+
+    .success-container h1 {
+        font-size: 28px;
+    }
+
+    .success-details {
+        padding: 20px;
+    }
+
+    .success-details p {
+        font-size: 16px;
+    }
+
+    .jobs-container {
+        width: 92%;
+    }
+
+    .job-card {
+        padding: 25px 20px;
+    }
+
+    .analytics-container {
+        width: 92%;
+
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .hero {
+        padding: 55px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .features {
+        width: 92%;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .analytics-container {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-card {
+        padding: 25px 20px;
+    }
+
+    .success-container h1 {
+        font-size: 24px;
+    }
+
+    .success-buttons {
+        flex-direction: column;
+    }
+
+    .hero-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .job-card h2 {
+        font-size: 21px;
+    }
+}
+/* =========================================================
+   APPLICATIONS PAGE
+========================================================= */
+
+.applications-container {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.applications-container h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.applications-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+.applications-table th {
+    background: #1f2937;
+
+    color: white;
+
+    padding: 16px;
+
+    text-align: left;
+
+    font-size: 15px;
+}
+
+.applications-table td {
+    padding: 16px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #374151;
+
+    font-size: 15px;
+}
+
+.applications-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.status-badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    background: #e5e7eb;
+
+    color: #374151;
+}
+
+.status-badge.applied {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-badge.scheduled {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.no-data {
+    text-align: center;
+
+    padding: 30px !important;
+
+    color: #6b7280 !important;
+}
+
+.error-text {
+    color: #dc2626 !important;
+}
+
+@media (max-width: 768px) {
+
+    .applications-container {
+        width: 92%;
+
+        padding: 20px;
+    }
+
+    .applications-table th,
+    .applications-table td {
+        padding: 12px;
+
+        font-size: 14px;
+    }
+}
